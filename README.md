@@ -1,32 +1,93 @@
-# IntelliAssess – AI Assessment Intelligence Dashboard
+🧠 IntelliAssess – AI Assessment Intelligence Dashboard
 
-IntelliAssess is an AI-powered system designed to evaluate online assessments by combining:
+IntelliAssess is an AI-powered assessment evaluation system designed to analyze both objective and subjective exam responses, along with behavioral confidence indicators, through a unified and explainable dashboard.
 
-- Objective exam performance analysis
-- Behavioral confidence and stress indicators
-- Subjective answer evaluation using LLMs and semantic similarity
+This project simulates how modern ed-tech platforms and online interview systems evaluate candidates beyond just right or wrong answers.
 
-## Key Features
-- Candidate confidence profiling
-- Explainable AI-based feedback
-- Subjective answer scoring with semantic similarity
-- Interactive Gradio dashboard
+🚀 Why IntelliAssess?
 
-## Tech Stack
-- Python
-- Gradio
-- Transformers (Flan-T5)
-- Sentence Transformers
-- Scikit-learn
+Traditional online exams focus only on scores.
+IntelliAssess goes further by answering questions like:
 
-## How It Works
-1. Objective metrics are analyzed to estimate confidence and stress.
-2. Subjective answers are evaluated by combining:
-   - Semantic similarity
-   - LLM-based examiner feedback
-3. Results are displayed through an interactive dashboard.
+How confident was the candidate while answering?
 
-## Running Locally
-```bash
+Was the performance consistent or stress-driven?
+
+How good is a subjective answer compared to an ideal response?
+
+Can AI provide explainable feedback instead of just marks?
+
+🎯 Key Features
+✅ Objective Performance Analysis
+
+Candidate-wise confidence classification
+
+Speed profiling (Normal / Fast / Slow)
+
+Stress-level inference
+
+Explainable behavioral insights
+
+✍️ Subjective Answer Evaluation
+
+Semantic similarity between student and model answers
+
+LLM-based examiner-style feedback
+
+Final score combining similarity + reasoning quality
+
+Robust fallback logic for stable evaluation
+
+🔍 Explainable AI
+
+Human-readable explanations for AI decisions
+
+Transparent scoring logic (no black-box grading)
+
+🖥 Interactive Dashboard
+
+Built using Gradio
+
+Real-time evaluation
+
+Clean, intuitive UI suitable for demos and reviews
+
+🧠 How the System Works
+1️⃣ Objective Evaluation Pipeline
+
+Precomputed behavioral metrics are analyzed
+
+Confidence, stress, and speed profiles are inferred
+
+Results are displayed with explainability
+
+2️⃣ Subjective Evaluation Pipeline
+
+Student answer is compared with a model answer using sentence embeddings
+
+Semantic similarity is computed
+
+An LLM generates examiner-style feedback
+
+A weighted final score is produced
+
+Design choice:
+The system performs runtime evaluation, making it adaptable to live exams and interviews without requiring large static datasets.
+
+🛠 Tech Stack
+
+Python
+
+Gradio – Interactive dashboard
+
+Transformers (Flan-T5) – LLM-based feedback
+
+Sentence Transformers – Semantic similarity
+
+Scikit-learn – Similarity computation
+
+Pandas – Data handling
+
+▶️ Running the Project Locally
 pip install -r requirements.txt
 python app.py
